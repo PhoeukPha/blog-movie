@@ -39,16 +39,62 @@ button {
 .card_custom_item {
     border: 0;
 }
-.card-text{
+
+.card_custom_item a:hover>.card-body h5 {
+    /* opacity: 0.8; */
+    cursor: pointer;
+    /* background: rgba(0,0,0,0.8); */
+    color: #c31b05;
+    display: block;
+}
+
+.card_custom_item a:hover>.play {
+    background: rgba(0, 0, 0, 0.5);
+    color: #c31b05;
+    display: block;
+    width: 100%;
+    height: 83%;
+    top: 0;
+    text-align: center;
+    opacity: 1;
+    border-radius: 5px;
+}
+
+.play .fa-circle-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #111111;
+}
+
+.play {
+    position: absolute;
+    display: none;
+    font-size: 50px;
+    z-index: 100;
+    opacity: 0;
+}
+
+.card-text {
     font-weight: 600;
 }
+
 .pt_pb_5px {
     padding: 5px 0px;
 }
-.card-body h5:hover{
-color: #c31b05;
-cursor: pointer;
+
+.card-body h5:hover {
+    color: #c31b05;
+    cursor: pointer;
 }
+
 .card-title {
     font-size: 15px;
     overflow: hidden;
@@ -69,6 +115,13 @@ cursor: pointer;
     border-radius: 5px;
 }
 
+.img_thumn_ {
+    height: 400px;
+}
+.img_thumn_small{
+    height: 200px;
+}
+
 .card-header_custom,
 .card-header_custom a {
     border: none;
@@ -77,11 +130,13 @@ cursor: pointer;
     border-radius: 5px !important;
     text-decoration: none;
 }
-.btn-telegram{
-    background-color: rgba(255,255,255,0.42);
+
+.btn-telegram {
+    background-color: rgba(255, 255, 255, 0.42);
     color: white;
 }
-.telegram-card{
+
+.telegram-card {
     background-color: #2ba2f2;
     color: white;
     border-radius: 5px;
@@ -101,7 +156,10 @@ cursor: pointer;
     flex-direction: row;
     align-content: center;
 }
-
+.content-footer{
+    height: 250px;
+    background-color: #111111;
+}
 @media (max-width: 576px) {
     .row_10px {
         --bs-gutter-x: 0px;
@@ -123,8 +181,13 @@ cursor: pointer;
         background-size: cover;
         width: 100%;
     }
-    .img_thumn{
+
+    .img_thumn {
         height: 270px;
+    }
+
+    .img_thumn_ {
+        height: 100%;
     }
 }
 
@@ -137,7 +200,8 @@ cursor: pointer;
         justify-content: end;
         color: red;
     }
-    .img_thumn{
+
+    .img_thumn {
         height: 300px;
     }
 }
@@ -146,12 +210,14 @@ cursor: pointer;
     .offcanvas {
         width: 250px !important;
     }
+
     .head__img__ads {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
     }
+
     .offcanvas-start-lg {
         top: 0;
         left: 0;
